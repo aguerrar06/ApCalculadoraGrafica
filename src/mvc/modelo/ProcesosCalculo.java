@@ -7,6 +7,14 @@ public class ProcesosCalculo {
 
     private double resultado;
 
+    /**
+     * Metodo que redirecciona al calculo que se debe hacer dependiendo de la ID del boton
+     * @param operador ID del boton
+     * @param numero1 Primer digito insertado
+     * @param numero2 Segundo digito insertado
+     * @return Digito calculado
+     * @throws ArithmeticException
+     */
     public double calcular(String operador, double numero1, double numero2) throws ArithmeticException{
         switch (operador) {
             case "botonSuma": sumar(numero1, numero2);break;
