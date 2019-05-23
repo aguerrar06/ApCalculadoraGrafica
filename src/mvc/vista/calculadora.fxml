@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10.0" prefHeight="520.0" prefWidth="467.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.controlador.ApCalculadoraGrafica">
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints maxWidth="197.0" minWidth="10.0" prefWidth="103.0" />
+      <ColumnConstraints maxWidth="111.0" minWidth="0.0" prefWidth="101.0" />
+      <ColumnConstraints maxWidth="174.0" minWidth="10.0" prefWidth="104.0" />
+      <ColumnConstraints maxWidth="157.0" minWidth="10.0" prefWidth="92.0" />
+   </columnConstraints>
+   <children>
+      <Label prefHeight="61.0" prefWidth="103.0" text="Numero 1:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numero1" prefHeight="31.0" prefWidth="137.0" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+      <Label prefHeight="44.0" prefWidth="103.0" text="Numero 2:" GridPane.rowIndex="1">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numero2" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+      <Button fx:id="botonSuma" mnemonicParsing="false" onAction="#calcular" prefHeight="31.0" prefWidth="35.0" text="+" textAlignment="CENTER" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin></Button>
+      <Button fx:id="botonResta" mnemonicParsing="false" onAction="#calcular" prefHeight="31.0" prefWidth="35.0" text="-" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin></Button>
+      <Button fx:id="botonMultiplicar" mnemonicParsing="false" onAction="#calcular" prefHeight="31.0" prefWidth="35.0" text="*" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin></Button>
+      <Button fx:id="botonDividir" mnemonicParsing="false" onAction="#calcular" prefHeight="31.0" prefWidth="35.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin></Button>
+      <Label contentDisplay="CENTER" prefHeight="21.0" prefWidth="106.0" text="Resultado:" GridPane.rowIndex="5">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="resultado" prefHeight="30.0" prefWidth="216.0" text="" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+   </children>
+</GridPane>
