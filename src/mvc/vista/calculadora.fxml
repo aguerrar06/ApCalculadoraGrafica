@@ -21,8 +21,8 @@
    <columnConstraints>
       <ColumnConstraints maxWidth="197.0" minWidth="10.0" prefWidth="103.0" />
       <ColumnConstraints maxWidth="111.0" minWidth="0.0" prefWidth="101.0" />
-      <ColumnConstraints maxWidth="174.0" minWidth="10.0" prefWidth="104.0" />
-      <ColumnConstraints maxWidth="157.0" minWidth="10.0" prefWidth="92.0" />
+      <ColumnConstraints maxWidth="174.0" minWidth="10.0" prefWidth="89.0" />
+      <ColumnConstraints maxWidth="187.0" minWidth="10.0" prefWidth="108.0" />
    </columnConstraints>
    <children>
       <Label prefHeight="61.0" prefWidth="103.0" text="Numero 1:">
@@ -37,24 +37,24 @@
          </font>
       </Label>
       <TextField fx:id="numero2" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-      <Button fx:id="botonSuma" mnemonicParsing="false" onAction="#ejecutar" prefHeight="31.0" prefWidth="35.0" text="+" textAlignment="CENTER" GridPane.rowIndex="3">
+      <Button fx:id="botonSuma" mnemonicParsing="false" onAction="#ejecutar" prefHeight="31.0" prefWidth="123.0" text="+" textAlignment="CENTER" GridPane.rowIndex="3">
          <GridPane.margin>
-            <Insets left="30.0" />
+            <Insets left="15.0" right="15.0" />
          </GridPane.margin></Button>
-      <Button fx:id="botonResta" mnemonicParsing="false" onAction="#ejecutar" prefHeight="31.0" prefWidth="35.0" text="-" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <Button fx:id="botonResta" mnemonicParsing="false" onAction="#ejecutar" prefHeight="31.0" prefWidth="75.0" text="-" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
          <GridPane.margin>
-            <Insets left="30.0" />
+            <Insets left="15.0" right="15.0" />
          </GridPane.margin></Button>
-      <Button fx:id="botonMultiplicar" mnemonicParsing="false" onAction="#ejecutar" prefHeight="31.0" prefWidth="35.0" text="*" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+      <Button fx:id="botonMultiplicar" mnemonicParsing="false" onAction="#ejecutar" prefHeight="31.0" prefWidth="75.0" text="*" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
          <GridPane.margin>
-            <Insets left="30.0" />
+            <Insets left="15.0" right="15.0" />
          </GridPane.margin></Button>
-      <Button fx:id="botonDividir" mnemonicParsing="false" onAction="#ejecutar" prefHeight="31.0" prefWidth="35.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+      <Button fx:id="botonDividir" mnemonicParsing="false" onAction="#ejecutar" prefHeight="31.0" prefWidth="75.0" text="/" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
          <GridPane.margin>
-            <Insets left="30.0" />
+            <Insets left="15.0" right="15.0" />
          </GridPane.margin></Button>
       <Label contentDisplay="CENTER" prefHeight="21.0" prefWidth="106.0" text="Resultado:" GridPane.rowIndex="5">
          <font>

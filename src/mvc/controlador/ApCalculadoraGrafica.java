@@ -18,7 +18,7 @@ public class ApCalculadoraGrafica {
     private ProcesosCalculo procesosCalculo;
 
     /**
-     * Constructor que inicializa la propiedad de los procesos de calculo
+     * Constructor que inicializa la propiedad de los procesos de cálculo
      */
     public ApCalculadoraGrafica() {
         this.procesosCalculo = new ProcesosCalculo();
@@ -33,7 +33,7 @@ public class ApCalculadoraGrafica {
         if (!numero1.getText().replace(" ","").isEmpty() && !numero2.getText().replace(" ","").isEmpty()) { //Comprueba si los campos de la calculadora no estan vacios
             try {
                 double resultadoCalculo = calcular(operacion);
-                resultado.setText(String.valueOf(resultadoCalculo));
+                imprimirResultado(resultadoCalculo);
             } catch (ArithmeticException ae) {
                 resultado.setText(ae.getMessage());
             }
@@ -41,23 +41,37 @@ public class ApCalculadoraGrafica {
     }
 
     /**
-     * Metodo que calcula y devuelve la cifra dependiendo del valor pasado por parametros
-     * @param operacion Boton pulsado por el usuario
-     * @return Cifra obtenida por el calculo
+     * Método que calcula y devuelve la cifra dependiendo del valor pasado por parametros
+     * @param operacion Botón pulsado por el usuario
+     * @return Cifra obtenida por el cálculo
      * @throws ArithmeticException
      */
     private double calcular(String operacion) throws ArithmeticException{
-        return procesosCalculo.calcular(operacion, Double.parseDouble(numero1.getText()), Double.parseDouble(numero2.getText()));
+        return procesosCalculo.calcular(operacion, Double.parseDouble(numero1.getText().replace(",", ".")), Double.parseDouble(numero2.getText().replace(",", ".")));
+        //Llama al método calcular de los procesos, reemplazando el posible caracter "," por un ".", asi no saltará error al hacer la operación
     }
 
     /**
-     * Dado el evento que activa la calculadora, saca la ID del boton para realizar la operacion
+     * Dado el evento que activa la calculadora, saca la ID del botón para realizar la operación
      * @param actionEvent Evento
      * @return String
      */
     private String extraerIdBoton(ActionEvent actionEvent) {
         Button boton = (Button) actionEvent.getSource();
         return boton.getId();
+    }
+
+    /**
+     * Evalúa el resultado e imprime según sea entero o decimal
+     * @param resultado Resultado
+     */
+    private void imprimirResultado(double resultado) {
+        String numero = String.valueOf(resultado);
+        if (Double.parseDouble(numero.substring(numero.indexOf("."))) == 0) { //Comprueba si la parte decimal es un 0, para saber si es un entero o no
+            this.resultado.setText(numero.substring(0, numero.indexOf(".")));
+        } else {
+            this.resultado.setText(String.valueOf(resultado));
+        }
     }
 
 }

@@ -8,11 +8,11 @@ public class ProcesosCalculo {
     private double resultado;
 
     /**
-     * Metodo que redirecciona al calculo que se debe hacer dependiendo de la ID del boton
-     * @param operador ID del boton
-     * @param numero1 Primer digito insertado
-     * @param numero2 Segundo digito insertado
-     * @return Digito calculado
+     * Método que redirecciona al calculo que se debe hacer dependiendo de la ID del botón
+     * @param operador ID del botón
+     * @param numero1 Primer dígito insertado
+     * @param numero2 Segundo dígito insertado
+     * @return Dígito calculado
      * @throws ArithmeticException
      */
     public double calcular(String operador, double numero1, double numero2) throws ArithmeticException{
