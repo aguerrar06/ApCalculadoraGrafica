@@ -36,6 +36,8 @@ public class ApCalculadoraGrafica {
                 imprimirResultado(resultadoCalculo);
             } catch (ArithmeticException ae) {
                 resultado.setText(ae.getMessage());
+            } catch (NumberFormatException nfe) {
+                resultado.setText("No se puede operar con caracteres");
             }
         }
     }
